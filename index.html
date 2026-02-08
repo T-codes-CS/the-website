@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Website</title>
+
+    <!-- import css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- import js -->
+    <script src="logic.js" defer></script>
+
+    <!-- import google font pixel sans -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    
+    <!-- ico/website logo -->
+    <link rel="icon" type="image/png" href="./Assets/letter_icon.png"/>
+</head>
+
+<body>
+    <div>
+        <!-- page 1 [Letter Received]-->
+        <section id="section1" class="active">
+            <div class="letter-received">
+
+                <div class="letter-notification">
+                    <h1>One (1) new letter received</h1>
+                
+                    <div class="letter-button">
+                        <button onclick="goToTimer()">OK</button>
+                        <button onclick="goToTimer()">OKIE</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- page 2 [Countdown 2:14]-->
+        <section id="section2">
+            <div class="timer-container">
+                <div class="timer" id="timer">2:14</div>
+
+                <p>Patience, its better to take things slow than rush it</p>
+            </div>
+        </section>
+
+        <!-- page 3 [View Letter]-->
+        <section id="section3">
+            <div class="show-letter">
+
+                <div class="letter-received-box">
+                    <h1>LETTER RECEIVED!</h1>
+                </div>
+                
+                    <button onclick="goToLetter()">
+                        <img src="./assets/letter_icon.png" alt="pixel letter">
+                    </button>
+                <p>are you ready to read whats inside?</p>
+            </div>
+            
+        </section>
+
+        <!-- page 4 [Letter Content]-->
+        <section id="section4">
+            <div class="letter-container">
+                <div class="card-stack" id="cardStack">
+
+                    <div class="card" data-index="0">
+                        <img src="./assets/letter_1.png" alt="letter-cover">
+                    </div>
+
+                    <div class="card" data-index="1">
+                        <img src="./assets/letter_2.png" alt="letter-page-1">
+                    </div>
+
+                    <div class="card" data-index="2">
+                        <img src="./assets/letter_3.png" alt="letter-page-2">
+                    </div>
+
+                </div>
+
+                <div class="controls">
+                    <button id="backBtn"><span class="icon">←</span> BACK</button>
+                    <button id="nextBtn">NEXT <span class="icon">→</span></button>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
